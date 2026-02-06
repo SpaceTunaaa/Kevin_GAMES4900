@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bsx0gybsdq11c"
+path="res://.godot/imported/mortar.obj-4404f257f237f692694b589a60c3a143.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mortar.obj-4404f257f237f692694b589a60c3a143.mesh"]
+
+source_file="res://Models/Models/OBJ format/mortar.obj"
+dest_files=["res://.godot/imported/mortar.obj-4404f257f237f692694b589a60c3a143.mesh", "res://.godot/imported/mortar.obj-4404f257f237f692694b589a60c3a143.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

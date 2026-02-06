@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c5wq5o6qvfq2f"
+path="res://.godot/imported/beet.obj-e91beb140e6180c7eb90089f1adc00de.mesh"
+
+[deps]
+
+files=["res://.godot/imported/beet.obj-e91beb140e6180c7eb90089f1adc00de.mesh"]
+
+source_file="res://Models/Models/OBJ format/beet.obj"
+dest_files=["res://.godot/imported/beet.obj-e91beb140e6180c7eb90089f1adc00de.mesh", "res://.godot/imported/beet.obj-e91beb140e6180c7eb90089f1adc00de.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

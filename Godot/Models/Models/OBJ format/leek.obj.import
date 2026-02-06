@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dk077ietxodgx"
+path="res://.godot/imported/leek.obj-924d9798454d36e907b2c525b49b901c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/leek.obj-924d9798454d36e907b2c525b49b901c.mesh"]
+
+source_file="res://Models/Models/OBJ format/leek.obj"
+dest_files=["res://.godot/imported/leek.obj-924d9798454d36e907b2c525b49b901c.mesh", "res://.godot/imported/leek.obj-924d9798454d36e907b2c525b49b901c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
