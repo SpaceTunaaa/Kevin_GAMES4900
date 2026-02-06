@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bipt6j27vcf6m"
+path="res://.godot/imported/plate-dinner.obj-c6a821ed74f6587174ef67a27020cf03.mesh"
+
+[deps]
+
+files=["res://.godot/imported/plate-dinner.obj-c6a821ed74f6587174ef67a27020cf03.mesh"]
+
+source_file="res://Kenney3DModels/Models/OBJ format/plate-dinner.obj"
+dest_files=["res://.godot/imported/plate-dinner.obj-c6a821ed74f6587174ef67a27020cf03.mesh", "res://.godot/imported/plate-dinner.obj-c6a821ed74f6587174ef67a27020cf03.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
