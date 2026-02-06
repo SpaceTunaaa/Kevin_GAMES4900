@@ -14,6 +14,12 @@
 
 [node name="Root" type="Node3D"]
 
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(0.98328984, 0.0706309, -0.16778648, 0.013507061, 0.89082104, 0.45415366, 0.18154499, -0.44883102, 0.8749812, -0.28011638, 1.0747269, 2.932649)
+
+[node name="DirectionalLight" type="DirectionalLight3D" parent="Camera"]
+transform = Transform3D(0.9832898, -0.057055686, 0.17287473, 0.07063088, 0.994797, -0.073416114, -0.16778648, 0.08439961, 0.9822038, 0.44715738, 1.6439304, 1.6430466)
+
 [node name="Food" type="MeshInstance3D" parent="."]
 
 [node name="burger-double" parent="Food" instance=ExtResource("5_oym0g")]
