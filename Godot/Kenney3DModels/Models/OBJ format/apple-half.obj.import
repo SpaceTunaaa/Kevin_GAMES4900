@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ib8uqc5a7fka"
+path="res://.godot/imported/apple-half.obj-16fa5cf3dbd4a5e62f982a5669466259.mesh"
+
+[deps]
+
+files=["res://.godot/imported/apple-half.obj-16fa5cf3dbd4a5e62f982a5669466259.mesh"]
+
+source_file="res://Kenney3DModels/Models/OBJ format/apple-half.obj"
+dest_files=["res://.godot/imported/apple-half.obj-16fa5cf3dbd4a5e62f982a5669466259.mesh", "res://.godot/imported/apple-half.obj-16fa5cf3dbd4a5e62f982a5669466259.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=3 uid="uid://q61qdppnmkym"]
+
+[ext_resource type="PackedScene" uid="uid://c6ibw1ugocwu2" path="res://Kenney3DModels/Models/FBX format/apple.fbx" id="1_py50m"]
+[ext_resource type="PackedScene" uid="uid://c4mnir7qb4q2h" path="res://Kenney3DModels/Models/FBX format/apple-half.fbx" id="2_4tfmb"]
+[ext_resource type="PackedScene" uid="uid://c3egcph6ouh8d" path="res://Kenney3DModels/Models/FBX format/bag-flat.fbx" id="3_mex01"]
+[ext_resource type="PackedScene" uid="uid://ckvc2kxanu6d2" path="res://Kenney3DModels/Models/FBX format/bag.fbx" id="4_ehcwu"]
+[ext_resource type="PackedScene" uid="uid://dvprd15hauyb6" path="res://Kenney3DModels/Models/FBX format/burger-double.fbx" id="5_oym0g"]
+[ext_resource type="PackedScene" uid="uid://bx38oc4wjjvvp" path="res://Kenney3DModels/Models/FBX format/burger-cheese-double.fbx" id="6_bm2pl"]
+[ext_resource type="PackedScene" uid="uid://qox1sd57u725" path="res://Kenney3DModels/Models/FBX format/bottle-musterd.fbx" id="7_rigkv"]
+[ext_resource type="PackedScene" uid="uid://brfjo8j7xsb01" path="res://Kenney3DModels/Models/FBX format/bottle-ketchup.fbx" id="8_cmg5t"]
+[ext_resource type="PackedScene" uid="uid://dr6n068fwa5hn" path="res://Kenney3DModels/Models/FBX format/cake-birthday.fbx" id="9_ehcwu"]
+[ext_resource type="PackedScene" uid="uid://dujwibbsp6f6l" path="res://Kenney3DModels/Models/FBX format/cake.fbx" id="10_oym0g"]
+[ext_resource type="PackedScene" uid="uid://3kvie4atp4ny" path="res://Kenney3DModels/Models/FBX format/cake-slicer.fbx" id="11_bm2pl"]
+
+[node name="Root" type="Node3D"]
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(0.98328984, 0.0706309, -0.16778648, 0.013507061, 0.89082104, 0.45415366, 0.18154499, -0.44883102, 0.8749812, -0.28011638, 1.0747269, 2.932649)
+
+[node name="DirectionalLight" type="DirectionalLight3D" parent="Camera"]
+transform = Transform3D(0.9832898, -0.057055686, 0.17287473, 0.07063088, 0.994797, -0.073416114, -0.16778648, 0.08439961, 0.9822038, 0.44715738, 1.6439304, 1.6430466)
+
+[node name="Food" type="MeshInstance3D" parent="."]
+
+[node name="burger-double" parent="Food" instance=ExtResource("5_oym0g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17345391, 0.04974258, 1.521433)
+
+[node name="burger-cheese-double" parent="Food/burger-double" instance=ExtResource("6_bm2pl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34797746, 0, -0.3115008)
+
+[node name="bottle-musterd" parent="Food/burger-double/burger-cheese-double" instance=ExtResource("7_rigkv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28445196, 0, 0.22928071)
+
+[node name="bottle-ketchup" parent="Food/burger-double/burger-cheese-double/bottle-musterd" instance=ExtResource("8_cmg5t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15251988, 0, 0.15175807)
+
+[node name="apple" parent="Food" instance=ExtResource("1_py50m")]
+transform = Transform3D(2.75943, 0, 0, 0, 2.75943, 0, 0, 0, 2.75943, 0.2040627, 0, 0.24379635)
+
+[node name="apple-half" parent="Food/apple" instance=ExtResource("2_4tfmb")]
+transform = Transform3D(-0.22984336, 0.49037334, -0.5891139, 0.7245756, 0.33961648, 0, 0.2500228, -0.5334264, -0.54156625, 0.17336711, -4.3200696e-08, -0.038417544)
+
+[node name="apple-half2" parent="Food/apple" instance=ExtResource("2_4tfmb")]
+transform = Transform3D(-0.15257367, -0.039158624, 0.6837082, 0.5097175, 0.46131358, 0.14016782, -0.4573604, 0.5271864, -0.071868725, 0.17531206, 0, 0.018016934)
+
+[node name="bag-flat" parent="Food" instance=ExtResource("3_mex01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.94234794, 0, 0.8387495)
+
+[node name="bag" parent="Food/bag-flat" instance=ExtResource("4_ehcwu")]
+transform = Transform3D(0.22819792, 0, -0.97361475, 0, 1, 0, 0.97361475, 0, 0.22819792, 0.146882, 0, -0.5101589)
+
+[node name="burger-double2" parent="Food" instance=ExtResource("5_oym0g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17345391, 0.04974258, 1.521433)
+
+[node name="burger-cheese-double" parent="Food/burger-double2" instance=ExtResource("6_bm2pl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34797746, 0, -0.3115008)
+
+[node name="bottle-musterd" parent="Food/burger-double2/burger-cheese-double" instance=ExtResource("7_rigkv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28445196, 0, 0.22928071)
+
+[node name="bottle-ketchup" parent="Food/burger-double2/burger-cheese-double/bottle-musterd" instance=ExtResource("8_cmg5t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15251988, 0, 0.15175807)
+
+[node name="cake-birthday" parent="Food" instance=ExtResource("9_ehcwu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7760391, 0, 1.1517167)
+
+[node name="cake" parent="Food/cake-birthday" instance=ExtResource("10_oym0g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032636285, 0, 0.6694548)
+
+[node name="cake-slicer" parent="Food/cake-birthday/cake" instance=ExtResource("11_bm2pl")]
+transform = Transform3D(0.15053618, 0, 0.9886045, 0, 1, 0, -0.9886045, 0, 0.15053618, 0.3879007, 0, -0.77773285)
