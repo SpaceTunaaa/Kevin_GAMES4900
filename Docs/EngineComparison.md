@@ -1,0 +1,5 @@
+The similarity between all engines is that they allow me to drag a model directly from a folder into a scene. If I want a static mesh of an apple, for example, all I need to do is find the file and drag and drop it into the scene. The controls for navigation differ across platforms—left click and right click result in different movements. However, all engines require some form of clicking and dragging to move the viewport.
+
+The biggest difference with Godot is that instead of creating individual actors or objects, each model exists as a scene or a node. In contrast, Unity and Unreal create an object instance of a static mesh that exists directly in the level. Even though the names and interfaces of the “prefab” feature differ across engines, the functionality is essentially the same: it allows you to create reusable foundations for objects.
+
+I have prior experience using Unity, but surprisingly, Godot’s navigation system feels very intuitive. Unreal is the hardest for me to use. Its interface is very complicated, and I ran into multiple issues when trying to save projects to my repository. As a result, it did not leave a good impression on me.
