@@ -5,6 +5,6 @@ public class Receiver : MonoBehaviour
     // This method prints 'Hello World' when called
     public void OnCalled()
     {
-        Debug.Log("Hello World");
+        Debug.Log("Hello, receiver is invoked");
     }
 }
