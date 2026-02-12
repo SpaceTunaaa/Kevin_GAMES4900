@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ccgjdex1xln8e"]
+
+[ext_resource type="Script" uid="uid://bncasetxnqedc" path="res://Level/Caller.gd" id="1_xbd7m"]
+[ext_resource type="Script" uid="uid://dvg466aaa6t1x" path="res://Level/Receiver.gd" id="2_byjgs"]
+
+[node name="Assignment2" type="Node2D" unique_id=306289314]
+
+[node name="Caller" type="Node" parent="." unique_id=1375453004]
+script = ExtResource("1_xbd7m")
+
+[node name="Receiver" type="Node" parent="." unique_id=2011158096]
+script = ExtResource("2_byjgs")
