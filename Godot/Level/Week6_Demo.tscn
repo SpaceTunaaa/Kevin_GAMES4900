@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bkpsvrssjs6k4"]
 
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Controller/proto_controller.tscn" id="1_lpf47"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_144of"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -13,9 +15,18 @@ sky = SubResource("Sky_lpf47")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lpf47"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_144of"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_1u4hq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cpcdb"]
+
 [node name="Week6Demo" type="Node3D" unique_id=386607057]
+
+[node name="ProtoController" parent="." unique_id=95571323 instance=ExtResource("1_lpf47")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.087131, 2.66862, 1.811573)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=784054525]
 environment = SubResource("Environment_1u4hq")
@@ -25,7 +36,21 @@ environment = SubResource("Environment_1u4hq")
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor" unique_id=1107199257]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" unique_id=2073436008]
+transform = Transform3D(18.957926, 0, 0, 0, 1, 0, 0, 0, 16.350317, 0, 0, 0)
+shape = SubResource("BoxShape3D_lpf47")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=487503020]
 transform = Transform3D(18.844402, 0, 0, 0, 1, 0, 0, 0, 16.413858, 0, 0, 0)
 mesh = SubResource("BoxMesh_144of")
+
+[node name="PressurePlate" type="Node3D" parent="." unique_id=922451169]
+
+[node name="Area3D" type="Area3D" parent="PressurePlate" unique_id=582328381]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PressurePlate/Area3D" unique_id=1315226700]
+transform = Transform3D(1.4613472, 0, 0, 0, 1.0994636, 0, 0, 0, -2.7119775, 0, 0.6357076, -0.0095228255)
+shape = SubResource("BoxShape3D_1u4hq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PressurePlate" unique_id=1318605846]
+transform = Transform3D(1.4304595, 0, 0, 0, 0.33731967, 0, 0, 0, 2.660942, 0, 0.5838381, 0)
+mesh = SubResource("BoxMesh_cpcdb")
