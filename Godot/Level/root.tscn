@@ -12,7 +12,23 @@
 [ext_resource type="PackedScene" uid="uid://dujwibbsp6f6l" path="res://Kenney3DModels/Models/FBX format/cake.fbx" id="10_oym0g"]
 [ext_resource type="PackedScene" uid="uid://3kvie4atp4ny" path="res://Kenney3DModels/Models/FBX format/cake-slicer.fbx" id="11_bm2pl"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ehcwu"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_oym0g"]
+sky_material = SubResource("ProceduralSkyMaterial_ehcwu")
+
+[sub_resource type="Environment" id="Environment_bm2pl"]
+background_mode = 2
+sky = SubResource("Sky_oym0g")
+tonemap_mode = 2
+glow_enabled = true
+
 [node name="Root" type="Node3D" unique_id=924013420]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=32219777]
+environment = SubResource("Environment_bm2pl")
 
 [node name="Camera" type="Camera3D" parent="." unique_id=2005326141]
 transform = Transform3D(0.98328984, 0.0706309, -0.16778648, 0.013507061, 0.89082104, 0.45415366, 0.18154499, -0.44883102, 0.8749812, -0.28011638, 1.0747269, 2.932649)

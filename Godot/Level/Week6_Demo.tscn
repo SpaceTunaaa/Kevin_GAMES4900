@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bkpsvrssjs6k4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_144of"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_lpf47"]
+sky_material = SubResource("ProceduralSkyMaterial_144of")
+
+[sub_resource type="Environment" id="Environment_1u4hq"]
+background_mode = 2
+sky = SubResource("Sky_lpf47")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_144of"]
+
+[node name="Week6Demo" type="Node3D" unique_id=386607057]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=784054525]
+environment = SubResource("Environment_1u4hq")
+
+[node name="Floor" type="Node3D" parent="." unique_id=1551588780]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor" unique_id=1107199257]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" unique_id=2073436008]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=487503020]
+transform = Transform3D(18.844402, 0, 0, 0, 1, 0, 0, 0, 16.413858, 0, 0, 0)
+mesh = SubResource("BoxMesh_144of")
