@@ -5,8 +5,9 @@
 
 [node name="Assignment2" type="Node2D" unique_id=306289314]
 
-[node name="Caller" type="Node" parent="." unique_id=1375453004]
+[node name="Caller" type="Node" parent="." unique_id=1375453004 node_paths=PackedStringArray("receiver")]
 script = ExtResource("1_xbd7m")
+receiver = NodePath("Receiver")
 
-[node name="Receiver" type="Node" parent="." unique_id=2011158096]
+[node name="Receiver" type="Node" parent="Caller" unique_id=2011158096]
 script = ExtResource("2_byjgs")
