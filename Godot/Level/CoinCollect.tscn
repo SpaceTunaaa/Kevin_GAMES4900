@@ -3,6 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Controller/proto_controller.tscn" id="1_4f6w0"]
 [ext_resource type="Script" uid="uid://dc4lkyrq50ghx" path="res://Level/collision_shape_3d.gd" id="2_xb66h"]
 
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_xb66h"]
+
+[sub_resource type="Sky" id="Sky_o031k"]
+sky_material = SubResource("PhysicalSkyMaterial_xb66h")
+
+[sub_resource type="Environment" id="Environment_kbjq8"]
+background_mode = 2
+sky = SubResource("Sky_o031k")
+
 [sub_resource type="BoxMesh" id="BoxMesh_mlu0j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mlu0j"]
@@ -14,9 +23,13 @@ size = Vector3(1.0239258, 1, 0.83644104)
 
 [node name="CoinCollect" type="Node3D" unique_id=1037612168]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=409503022]
+environment = SubResource("Environment_kbjq8")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=923992325]
-transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, 0.3976522, -0.29337296, 0.8693705, -0.30310526, 0.85230994, 0.42625692, 0, 7.2736917, 8.568868)
-light_energy = 1.167
+transform = Transform3D(-0.8660254, -0.43301278, 0.25000006, 0.3976522, -0.29337296, 0.8693705, -0.30310526, 0.85230994, 0.42625692, 0, 8.780891, 8.568868)
+light_color = Color(1, 1, 0.9098039, 1)
+light_energy = 2.0
 shadow_enabled = true
 directional_shadow_max_distance = 380.0
 
