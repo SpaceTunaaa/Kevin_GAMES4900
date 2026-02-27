@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cnksy4b74gydd"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Controller/proto_controller.tscn" id="1_4f6w0"]
-[ext_resource type="Script" uid="uid://6w1dedi6gscs" path="res://Controller/proto_controller.gd" id="2_xb66h"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_mlu0j"]
 
@@ -26,4 +25,3 @@ shape = SubResource("BoxShape3D_mlu0j")
 
 [node name="ProtoController" parent="." unique_id=909794686 instance=ExtResource("1_4f6w0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6103463, 0)
-script = ExtResource("2_xb66h")
