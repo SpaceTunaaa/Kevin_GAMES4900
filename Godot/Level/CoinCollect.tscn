@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cnksy4b74gydd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mlu0j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mlu0j"]
+size = Vector3(1.0239258, 1, 0.83644104)
+
+[node name="CoinCollect" type="Node3D" unique_id=1037612168]
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=1846570166]
+transform = Transform3D(12.451292, 0, 0, 0, 0.41914493, 0, 0, 0, 11.923865, 0, 0, 0)
+mesh = SubResource("BoxMesh_mlu0j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1708831574]
+transform = Transform3D(12.451292, 0, 0, 0, 0.41914493, 0, 0, 0, 11.923865, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=493263927]
+transform = Transform3D(0.97337574, 0, 0, 0, 1, 0, 0, 0, 1.1978647, -0.0011882024, 0, -0.00075853727)
+shape = SubResource("BoxShape3D_mlu0j")
