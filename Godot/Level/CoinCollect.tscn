@@ -48,12 +48,12 @@ transform = Transform3D(0.97337574, 0, 0, 0, 1, 0, 0, 0, 1.1978647, -0.001188202
 shape = SubResource("BoxShape3D_mlu0j")
 
 [node name="ProtoController" parent="." unique_id=909794686 groups=["Player"] instance=ExtResource("1_4f6w0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6103463, 2.5765245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22604942, 2.5765245)
 
 [node name="CoinRoot" type="Node3D" parent="." unique_id=1234926964]
 
 [node name="Coin" type="MeshInstance3D" parent="CoinRoot" unique_id=1028545546]
-transform = Transform3D(1, 0, 0, 0, -2.5078009e-09, -1, 0, 0.057371795, -4.371139e-08, 0, 1.5623336, -2.945681)
+transform = Transform3D(1, 0, 0, 0, -2.5078009e-09, -1, 0, 0.057371795, -4.371139e-08, 0, 2.1856928, -2.945681)
 mesh = SubResource("CylinderMesh_4f6w0")
 skeleton = NodePath("../..")
 
