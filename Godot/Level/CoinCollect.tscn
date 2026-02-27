@@ -1,22 +1,11 @@
 [gd_scene format=3 uid="uid://cnksy4b74gydd"]
 
-[ext_resource type="Script" uid="uid://6w1dedi6gscs" path="res://Controller/proto_controller.gd" id="1_4f6w0"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_xb66h"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_mlu0j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mlu0j"]
 size = Vector3(1.0239258, 1, 0.83644104)
 
 [node name="CoinCollect" type="Node3D" unique_id=1037612168]
-
-[node name="Player" type="CharacterBody3D" parent="." unique_id=1468418026]
-script = ExtResource("1_4f6w0")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=1285582254]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8079488, 0)
-mesh = SubResource("CapsuleMesh_xb66h")
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=1846570166]
 transform = Transform3D(12.451292, 0, 0, 0, 0.41914493, 0, 0, 0, 11.923865, 0, 0, 0)
