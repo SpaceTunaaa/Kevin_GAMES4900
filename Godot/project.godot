@@ -15,6 +15,6 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Godot_GAMES4900"
-run/main_scene="uid://q61qdppnmkym"
+run/main_scene="uid://cnksy4b74gydd"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
