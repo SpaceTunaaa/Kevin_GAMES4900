@@ -18,3 +18,7 @@ config/name="Godot_GAMES4900"
 run/main_scene="uid://cnksy4b74gydd"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[global_group]
+
+Player=""

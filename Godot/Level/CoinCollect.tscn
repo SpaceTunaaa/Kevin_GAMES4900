@@ -1,27 +1,51 @@
 [gd_scene format=3 uid="uid://cnksy4b74gydd"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Controller/proto_controller.tscn" id="1_4f6w0"]
+[ext_resource type="Script" uid="uid://dc4lkyrq50ghx" path="res://Level/collision_shape_3d.gd" id="2_xb66h"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_mlu0j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mlu0j"]
 size = Vector3(1.0239258, 1, 0.83644104)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_4f6w0"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4f6w0"]
+
 [node name="CoinCollect" type="Node3D" unique_id=1037612168]
 
-[node name="Floor2" type="Node3D" parent="." unique_id=583514711]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=923992325]
+transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, 0.3976522, -0.29337296, 0.8693705, -0.30310526, 0.85230994, 0.42625692, 0, 7.2736917, 8.568868)
+light_energy = 1.167
+shadow_enabled = true
+directional_shadow_max_distance = 380.0
 
-[node name="Floor" type="MeshInstance3D" parent="Floor2" unique_id=1846570166]
+[node name="FloorRoot" type="Node3D" parent="." unique_id=583514711]
+
+[node name="Floor" type="MeshInstance3D" parent="FloorRoot" unique_id=1846570166]
 transform = Transform3D(12.451292, 0, 0, 0, 0.41914493, 0, 0, 0, 11.923865, 0, 0, 0)
 mesh = SubResource("BoxMesh_mlu0j")
 skeleton = NodePath("../..")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Floor2" unique_id=1708831574]
+[node name="StaticBody3D" type="StaticBody3D" parent="FloorRoot" unique_id=1708831574]
 transform = Transform3D(12.451292, 0, 0, 0, 0.41914493, 0, 0, 0, 11.923865, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2/StaticBody3D" unique_id=493263927]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FloorRoot/StaticBody3D" unique_id=493263927]
 transform = Transform3D(0.97337574, 0, 0, 0, 1, 0, 0, 0, 1.1978647, -0.0011882024, 0, -0.00075853727)
 shape = SubResource("BoxShape3D_mlu0j")
 
-[node name="ProtoController" parent="." unique_id=909794686 instance=ExtResource("1_4f6w0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6103463, 0)
+[node name="ProtoController" parent="." unique_id=909794686 groups=["Player"] instance=ExtResource("1_4f6w0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6103463, 2.5765245)
+
+[node name="CoinRoot" type="Node3D" parent="." unique_id=1234926964]
+
+[node name="Coin" type="MeshInstance3D" parent="CoinRoot" unique_id=1028545546]
+transform = Transform3D(1, 0, 0, 0, -2.5078009e-09, -1, 0, 0.057371795, -4.371139e-08, 0, 1.5623336, -2.945681)
+mesh = SubResource("CylinderMesh_4f6w0")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="CoinRoot/Coin" unique_id=931714309]
+script = ExtResource("2_xb66h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CoinRoot/Coin/Area3D" unique_id=848977151]
+shape = SubResource("SphereShape3D_4f6w0")
