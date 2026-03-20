@@ -94,7 +94,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Attack"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""42e53dcd-6299-49e3-8e99-6ea6d75ce386"",
                     ""expectedControlType"": """",
                     ""processors"": """",

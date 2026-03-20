@@ -24,7 +24,7 @@ public class Custom_Attack_Input : MonoBehaviour
     }
 
     private void Update(){
-        if (attackHeld) Debug.Log("ATTACK HELD");
+        if (attackHeld) Debug.Log("Attack!!");
         Vector2 move = input.Player.Move.ReadValue<Vector2>();
         if (move != Vector2.zero) Debug.Log($"MOVE {move}");
         
@@ -41,6 +41,5 @@ public class Custom_Attack_Input : MonoBehaviour
     private void AttackReleased(InputAction.CallbackContext _)
     {
         attackHeld = false;
-        Debug.Log("ATTACK RELEASED");
     }
 }
