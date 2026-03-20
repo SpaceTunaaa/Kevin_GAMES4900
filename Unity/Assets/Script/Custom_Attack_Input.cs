@@ -20,11 +20,12 @@ public class Custom_Attack_Input : MonoBehaviour
     {
         input.Player.Attack.performed -= AttackPressed;
         input.Player.Attack.canceled -= AttackReleased;
+        Debug.Log("Attack!!");
         input.Player.Disable();
     }
 
     private void Update(){
-        if (attackHeld) Debug.Log("Attack!!");
+        // if (attackHeld) Debug.Log("ATTACK HELD");
         Vector2 move = input.Player.Move.ReadValue<Vector2>();
         if (move != Vector2.zero) Debug.Log($"MOVE {move}");
         
@@ -41,5 +42,6 @@ public class Custom_Attack_Input : MonoBehaviour
     private void AttackReleased(InputAction.CallbackContext _)
     {
         attackHeld = false;
+        // Debug.Log("ATTACK RELEASED");
     }
 }
