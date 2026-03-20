@@ -1,8 +1,38 @@
 [gd_scene format=3 uid="uid://cb1pvpkdhpcba"]
 
 [ext_resource type="Script" uid="uid://dwowtyqtcf6h3" path="res://Level/InputHandler.gd" id="1_3ylho"]
+[ext_resource type="ArrayMesh" uid="uid://mls4j4wac1jy" path="res://Kenney3DModels/Models/OBJ format/loaf.obj" id="2_qn47t"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qn47t"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_qn47t"]
+
+[sub_resource type="Sky" id="Sky_ljyip"]
+sky_material = SubResource("PhysicalSkyMaterial_qn47t")
+
+[sub_resource type="Environment" id="Environment_qn47t"]
+background_mode = 2
+sky = SubResource("Sky_ljyip")
 
 [node name="Root_Input" type="Node3D" unique_id=1274807162]
 
-[node name="Input_Handler" type="Node3D" parent="." unique_id=1525849542]
+[node name="Floor" type="Node3D" parent="." unique_id=1895469678]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1341426631]
+transform = Transform3D(4.70428, 0, 0, 0, 0.07574967, 0, 0, 0, 4.9133825, 0, -0.07084328, 0)
+mesh = SubResource("BoxMesh_qn47t")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1870892569]
+environment = SubResource("Environment_qn47t")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1134067040]
+transform = Transform3D(1, 0, 0, 0, 0.47127354, 0.8819871, 0, -0.8819871, 0.47127354, 0, 2.6746957, 2.7378526)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=664406535]
+transform = Transform3D(1, 0, 0, 0, 0.9326264, 0.36084336, 0, -0.36084336, 0.9326264, 0, 1.4947715, 3.6098404)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=368072070]
+mesh = ExtResource("2_qn47t")
+
+[node name="Input_Handler" type="Node3D" parent="MeshInstance3D" unique_id=1525849542]
 script = ExtResource("1_3ylho")
